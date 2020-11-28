@@ -1,0 +1,23 @@
+{% extends "form.html" %}
+
+{% block main %}
+<form action="/register" method="post" autocomplete="off">
+    <div class="form-group">
+        <label for="username">Username: </label>
+        <input type="text" name="username">
+    </div>
+    <div class="form-group">
+        <label for="password">Password: </label>
+        <input type="password" name="password">
+    </div>
+    <div class="form-group">
+        <label for="password">Confirm Password: </label>
+        <input type="password" name="confirmation">
+    </div>
+    <div class="buttons">
+        <button class="btn btn-blue" type="submit">Register</button>
+    </div>
+</form>
+<p class="info-text">Click <a href="/login">here</a> to log in.</p>
+<p class="warning">{{ message }}</p>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<h2 class="title">Start your journey.</h2>
+<div class="map-container">
+    <div id="map"></div>
+</div>
+<h3 class="score"><span id="visited">0</span> out of <span id="max"></span></h3>
+<h4 class="description">Keep track of where you have been and your travel journey by updating European map.</h4>
+<div id="overlay" class="fade-in">
+    <i class="las la-times exit" onclick="return overlayOff()"></i>
+    <form action="/" method="post" autocomplete="off">
+        <h3>Add country: </h3>
+        <div class="search-container">
+            <div id="the-basics" class="form-group">
+                <input type="text" id="countryname" name="country" class="typeahead" placeholder="Country name.." autofocus/>
+            </div>
+            <button id="add-btn" type="submit" class="plus" disabled>
+                <i class="las la-plus" aria-hidden="true"></i>
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

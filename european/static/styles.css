@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+:root{
+    --blue: #209CEE;
+    --black: #363636;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    padding:1rem;
+    font-family: "Open Sans";
+    color:var(--black);
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .navbar-title img{
+    width:60%;
+}
+nav .navbar-icons{
+    display:flex;
+}
+nav .navbar-icons a{
+    font-size:2rem;
+    margin-left:0.5rem;
+    color:var(--black);
+}
+main{
+    margin-top: 10vh;
+    padding-bottom: 2.5rem;
+}
+main > h2,h3,h4{
+    font-weight: 400;
+    text-align: center;
+}
+main .score{
+    color:var(--blue);
+    font-weight: 400;
+}
+main .score span{
+    font-size:2rem;
+}
+main .description{
+    margin-top:2rem;
+    padding:0 2rem;
+}
+main .description a{
+    color:var(--blue) !important;
+}
+main .map-container{
+    margin: 1.5rem 0;
+}
+.form-wrapper{
+    width:80vw;
+    margin: 15vh auto 0 auto;
+}
+.form-wrapper img{
+    width:60vw;
+    margin-bottom:1.8rem;
+}
+.form-wrapper .logo-container{
+    text-align: center;
+}
+.form-wrapper .form-group{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+}
+.form-group input{
+    height: 2rem;
+    font-size:1.2rem;
+    padding-left:0.3rem;
+}
+.form-wrapper .buttons{
+    display:flex;
+    justify-content: space-evenly;
+    margin-top:2rem
+}
+.btn{
+    font-size: 1.1rem;
+    border:none;
+    border-radius: 5px;
+    padding:0.6rem 1rem;
+    color:#fff;
+    text-decoration: none;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.btn-blue{
+    background-color: var(--blue);
+}
+.btn-black{
+    background-color: var(--black);
+}
+.form-wrapper .info-text{
+    margin-top: 2rem;
+    text-align: center;
+}
+.form-wrapper .warning{
+    margin-top:2rem;
+    text-align: center;
+    font-weight: bold;
+}
+#overlay{
+    position: fixed;
+    display:none;
+    width:100%;
+    height: 100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 2;
+    cursor:pointer;
+    display:none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#overlay h3{
+    color:#fff;
+    margin-bottom: 2rem;
+}
+#overlay .search-container{
+    margin-bottom: 20vh;
+    display:flex;
+}
+#overlay .search-container input{
+    outline:none;
+    border:none;
+    font-size: 1.2rem;
+}
+#overlay .plus{
+    color:#fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:2rem;
+    cursor:pointer;
+}
+#overlay .exit{
+    color:#fff;
+    position: absolute;
+    top:10px;
+    left:10px;
+    font-size:2rem;
+    cursor:pointer;
+}
+#overlay .the-basics > .tt-menu, .tt-open{
+    display:block;
+    width:100%;
+    background-color: #fff;
+}
+#overlay .the-basics > .tt-suggestion, .tt-selectable{
+    padding:0.3rem 0.5rem;
+}
+#overlay .add-container #add-btn{
+    background-color: transparent;
+    outline:none;
+    border:none;
+    color:#fff;
+}
+.jconfirm-holder{
+    padding:2rem !important;
+}
+.datamaps-subunit{
+    cursor:pointer;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left:-0.1rem;
+    width:100%;
+    height: 2.5rem;
+    text-align: center;
+}
+footer a, main a, .info-text a{
+    text-decoration: none;
+    color: var(--blue);
+}
+
+/* Media queries */
+
+@media screen and (min-aspect-ratio: 9/15) {
+    footer{
+        display:none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    nav .navbar-title img{
+        width:12rem;
+    }
+    main{
+        margin-top:4rem;
+    }
+    main .map-container{
+        width: 60vw;
+        margin: 2rem auto;
+    }
+    .jconfirm-holder{
+        width:400px;
+        margin: 0 auto;
+    }
+    .form-wrapper{
+        width:500px;
+    }
+    .form-wrapper img{
+        width:60%;
+    }
+    .form-wrapper form{
+        margin-top:2rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    main .map-container{
+        width: 40vw;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+
+
+/* Animations */
+
+.fade-in {
+    animation: fadeIn ease-in 400ms;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
